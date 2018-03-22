@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mountprobe ufs || echo "Couldn't mountprobe ufs."
+modprobe ufs || echo "Couldn't modprobe ufs."
 
 list=`fdisk -l | grep UFS | cut -d '/' -f 3 | cut -d ' ' -f 1`
 
