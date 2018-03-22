@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mountprobe ufs || echo "Couldn't mountprobe ufs."
+
 list=`fdisk -l | grep UFS | cut -d '/' -f 3 | cut -d ' ' -f 1`
 
 for device in $list; do
